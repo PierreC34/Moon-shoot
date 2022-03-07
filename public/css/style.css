@@ -1,0 +1,435 @@
+                                                            /* GESTION DU BODY */
+
+body {
+  height: 100%;
+  background-color: white !important;
+  margin: unset;
+}
+p {
+  margin: unset;
+}
+a {
+  text-decoration: none !important;
+}
+@font-face {
+    font-family: 'courgetteregular';
+    src: url('../font/courgette-regular-webfont.woff2') format('woff2'),
+          url('../font/courgette-regular-webfont.woff') format('woff');
+    font-weight:bolder;
+    font-style:normal;
+    
+
+}
+@font-face {
+  font-family: 'pristina';
+  src: url('../font/pristina.woff'), format('woff');
+  font-weight:bolder;
+  font-style:normal;
+}
+
+                                                            /* GESTION DE LA NAVBAR ( TEMPLATE )  */
+
+header {
+  margin: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  text-shadow: unset !important;
+}
+nav{
+  width: 80%;
+}
+.nav-link {
+  /* Couleur alignement texte */
+  text-align: center;
+  color: white !important;
+  font-family: pristina !important;
+  font-size: x-large;
+}
+.nav-link:hover {
+  /* Modification au survol */
+  transform: scale(1.3);
+  color: #6610f2!important;
+  text-shadow: none !important;
+  font-weight: bold;
+}
+.bg-custom-1 {
+  /* Gestion du gradient */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(0, 0, 0, 0) 100%
+  );
+}
+.nav-a {
+  width: 90px;
+}
+
+                                                            /* GESTION DU FOOTER ( TEMPLATE ) */
+
+footer {
+  width: 100%;
+  height: 9vh;
+  color: white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  bottom: 0%;
+  position: fixed;
+  padding-bottom: 5%;
+
+}
+.a-footer {
+  color: white;
+  margin: 1%;
+  font-family: pristina !important;
+  font-size: large;
+}
+.a-footer:hover {
+  color: rgb(233, 59, 184) !important;
+}
+.div-copyright {
+  font-size: smaller;
+
+}
+
+                                                            /* GESTION DE LA PAGE PRESENTATION */
+
+.div-principale-presentation-1 {
+  /* Gestion conteneur principal + background  */
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url("../images/image_accueil.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.section-principale-presentation-1{ 
+  /* Gestion du grid (texte, bouton) */
+  display: grid;
+  grid-template-rows: 92% 8%;
+  padding-top: 5%;
+  font-weight: bold;
+}
+.article-principal-presentation-1{
+  /* Gestion du conteneur (texte)  */
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  margin: auto;
+}
+.h1-biographie{
+  /* Gestion du titre */
+  padding-top: 3%;
+}
+.p-biographie{
+  /* Gestion et placement du texte */
+  text-align: start;
+  padding: 4%;
+}
+.boutton-presentation-1{
+  /* Gestion du bouton ( Voir la galerie ) */
+  margin-right:3%;
+  width: 163px;
+  background-color: rgb(255, 0, 0, 0.5);
+  color: white;
+}
+.boutton-presentation-2{
+  /* Gestion du bouton ( Prendre rendez-vous ) */
+  margin-left: 3%;
+  background-color: rgb(51, 250,225, 0.5);
+  color: white;
+}
+
+                                                            /* GESTION DE LA PAGE GALERIE */
+
+.div-principale-galerie-1{
+  background-color:black;
+  min-height:100vh;
+  padding-bottom:3%;
+}
+.h1-galerie{
+  padding-top: 7%;
+}
+.grille {
+  /* Gestion de la grille image */
+  max-width: 1300px;
+  width: 80%;
+  height: auto;
+  margin:auto;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-gap: 20px;
+  padding-bottom: 11vh;
+}
+.grid-item{
+  /* Mise en forme grille (unité) */
+  width: 300px;
+  height: 200px;
+  background: white;
+  display: grid;
+  grid-template-rows: 85% 15%;
+}
+.div-modifier-supprimer, .grid-galerie-modifier-supprimer{
+  /* Création grid bouton */
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.button-add{
+  /* Gestion des boutons */
+  position: relative !important;
+  bottom: 10vh !important;
+}
+.message-galerie {
+  /* Gestion du $_SESSION['aler'] */
+  display: block;
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  padding-bottom: 5%;
+}
+
+                                                            /* GESTION DE LA PAGE SERVICE */
+
+.div-principale-service-1{
+  height: 100vh;
+  background-color: black;
+}
+.vardump-service{
+  padding-top: 20vh;
+}
+
+
+                                                            /* GESTION DE LA PAGE CONTACT */
+
+.div-principale-contact-1 {
+  /* Ajout de l'image de fond */
+  background-image: url("../images/image-contact.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  
+}
+.section-contact-un {
+  /* Gestion du grid formulaire , informations */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 3%;
+  font-weight: bold;
+}
+.section-contact-deux {
+  /* Gestion partie droite (informations) */
+  margin: auto;
+  font-size: x-large;
+  font-weight: bold;
+  text-shadow: none !important;
+}
+.article-iframe {
+  /* Gestion du conteneur de la map */
+  width: 100%;
+  height:40vh;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+iframe {
+  /* Gestion et dimensionnement de la map  */
+  padding-top: 5vh;
+  height: 70%;
+  width: 100%;
+  grid-column: 2/3;
+}
+.card{
+  border: unset;
+}
+.card-body{
+  color: unset;
+  text-shadow: none !important;
+}
+.form-control{
+  color: white ;
+}
+.h1-contact-un{
+text-shadow: none !important;
+font: bold;
+}
+.account{
+  font-size: xx-large;   
+}
+
+                                                            /* PAGE MODIFY IMAGE  */
+
+.div-modify-image{
+  min-height: 100vh;
+  padding-bottom: 6%;
+}
+.div-image{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+.fichier-modify{
+  display: flex;
+  flex-direction: column;
+}
+.form-control-file{
+  margin: auto;
+  padding-top: 1%;
+}
+
+                                                            /*  PAGE AJOUT IMAGE  */
+
+.div-ajout-image{
+  height: 100vh;
+}
+.form-ajout-image{
+  height: 30vh;
+  display: grid;
+  grid-template-rows: 45% 45% 10%;
+}
+.div-ajout-image-2{
+  display: flex;
+  justify-content: center;
+}
+.div-principale-error-1{
+  height: 100vh;
+  width: 100vw;
+}
+.section-principal-error-1{
+  height: 50%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.message-error{
+  padding-top:20%;
+}
+
+                                                            /*  GESTION DE LA PAGE MONCOMPTE  */
+
+.div-principale-moncompte{
+  min-height: 100vh;
+  padding-bottom: 5%;
+}
+.div-modifier-supprimer{
+  margin: auto;
+  padding-top: 10vh;
+  width: 50%;
+}
+.btn-modifier{
+  width: 90px;
+  margin: auto;
+}
+.btn-supprimer{
+  width: 100px;
+  margin: auto;
+}
+.div-ajout-compte{
+  height: 100vh;
+}
+.addUser{
+  width: 100px;
+  margin-top: 5%;
+}
+.p-compte{
+  padding-top: 5%;
+  min-width: 200px ;
+}
+.valider-compte{
+  width: 200px;
+}
+.pseudo-compte, .mdp-compte, .crea1{
+  min-width: 300px;
+}
+
+                                                            /*  GESTION ACCOUNT ( LOGO ) */
+
+.div-account, .div-account-deconnection{
+  position: fixed;
+  margin-top: 12px;
+  margin-left: 12px;
+  z-index: 1;
+}
+
+
+
+                                                            /*  GESTION PAGE DE CONNEXION */
+
+.div-connexion-compte, .div-principale-ajout-compte{
+  /*  */
+  display: grid;
+  grid-template-columns: 50% 50% ;
+  min-height: 100vh;
+  background-image:url("../images/imaage_compte_inscription-ConvertImage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.message-connexion{
+  min-width: 115px;
+}
+
+
+
+                                                            /* PARTIE MEDIA QUERIES */
+
+@media screen and (min-width: 1150px) {
+
+  .div-principale-galerie-1 {
+    background-color: black;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-height: 800px) {
+
+  .div-secondaire-ajout-compte{
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .section-contact-un{
+    display: unset;
+  }
+  .fa-bars{
+  margin-left: 23px;
+}
+}
+
+@media screen and (max-width: 500px) {
+
+  .section-principale-presentation-1{
+    padding-top: 8vh;
+  }
+  .div-principale-presentation-1{
+    background-size: 250% 100%;
+  }
+  .div-connexion-compte, .div-principale-ajout-compte{
+    background-size: 200% 100%;
+    background-position: 68%;
+  }
+
+  
+
+}
+@media screen and (max-width: 777px) {
+  .h1-galerie{
+        padding-top: 13%;
+  }
+  .button-add {
+
+    bottom: 13vh !important;
+}
+
+}
+@media screen and (max-width: 991px) {
+ 
+  .nav-a{
+    width: unset;
+  }
+
+}
